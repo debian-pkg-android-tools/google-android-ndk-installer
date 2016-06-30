@@ -1,0 +1,5 @@
+debian/debhelper-build-stamp
+debian/files
+debian/google-android-ndk-installer/
+debian/google-android-ndk-installer.debhelper.log
+debian/google-android-ndk-installer.substvars

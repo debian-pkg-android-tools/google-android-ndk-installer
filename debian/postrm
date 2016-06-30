@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+#echo "google-android-ndk postrm: $@"
+
+if [ "$1" = "purge" ]
+then
+	rm -rf /var/cache/google-android-ndk-installer
+fi
+
+#DEBHELPER#
+
+exit 0

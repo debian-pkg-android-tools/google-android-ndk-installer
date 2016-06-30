@@ -1,0 +1,25 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    configure)
+        install -d -m0700 -o nobody -g nogroup /var/cache/google-android-ndk-installer
+        cp /usr/share/google-android-ndk-installer/Makefile \
+            /usr/share/google-android-ndk-installer/android-ndk-r12-linux-x86_64.zip.sha1 \
+            /var/cache/google-android-ndk-installer/
+        make -C /var/cache/google-android-ndk-installer/ install
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
