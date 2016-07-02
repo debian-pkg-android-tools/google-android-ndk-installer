@@ -15,6 +15,7 @@ Depends: wget,
          make | build-essential | dpkg-dev,
          unzip,
          ca-certificates,
+         debconf,
          ${misc:Depends}
 Description: Google Android NDK
  This package will download the Google Android NDK package and create a Debian

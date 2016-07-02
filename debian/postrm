@@ -2,12 +2,26 @@
 
 set -e
 
-#echo "google-android-ndk postrm: $@"
+case "$1" in
+    purge)
+        rm -rf /var/cache/google-android-ndk-installer
+        if [ -e /usr/share/debconf/confmodule ]
+        then
+                # Source debconf library.
+                . /usr/share/debconf/confmodule
+                # Remove my changes to the db.
+                db_purge
+        fi
+        ;;
 
-if [ "$1" = "purge" ]
-then
-	rm -rf /var/cache/google-android-ndk-installer
-fi
+    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        ;;
+
+    *)
+        echo "postrm called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
 
 #DEBHELPER#
 
