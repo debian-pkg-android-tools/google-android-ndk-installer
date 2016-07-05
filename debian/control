@@ -16,6 +16,7 @@ Depends: wget,
          unzip,
          ca-certificates,
          debconf,
+         po-debconf,
          ${misc:Depends}
 Description: Google Android NDK
  This package will download the Google Android NDK package and create a Debian
@@ -26,5 +27,6 @@ Description: Google Android NDK
  help you reuse existing code libraries written in those languages.
  .
  WARNING: Installing this Debian package causes android-ndk-r12-linux-x86_64.zip
- to be downloaded from dl-ssl.google.com.The End User License Agreement of this
- binary package is available at developer.android.com.
+ to be downloaded from dl-ssl.google.com and/or mirrors.neusoft.edu.cn.The End
+ User License Agreement of this binary package is available at 
+ developer.android.com.
