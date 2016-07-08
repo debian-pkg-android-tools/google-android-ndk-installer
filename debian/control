@@ -18,7 +18,7 @@ Depends: wget,
          debconf,
          po-debconf,
          ${misc:Depends}
-Description: Google Android NDK Installer
+Description: Google Android Native Development Kit (NDK) Installer
  This package will download the Google Android NDK package and create a Debian
  package.
  . 
