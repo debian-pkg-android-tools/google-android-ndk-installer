@@ -1,6 +1,6 @@
 Template: google-android-ndk-installer/mirror
 Type: select
-Choices: dl-ssl.google.com, mirrors.neusoft.edu.cn
-Default: dl-ssl.google.com
-_Description: Mirror to download Android-NDK from ?
+Choices: https://dl.google.com, http://mirrors.neusoft.edu.cn, http://android-mirror.bugly.qq.com:8080
+Default: https://dl.google.com
+_Description: Mirror to download Android-NDK ?
  Please select your prefered mirror to download Android-NDK from.

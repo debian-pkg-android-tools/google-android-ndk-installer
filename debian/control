@@ -27,6 +27,6 @@ Description: Google Android Native Development Kit (NDK) Installer
  help you reuse existing code libraries written in those languages.
  .
  WARNING: Installing this Debian package causes android-ndk-r12-linux-x86_64.zip
- to be downloaded from dl-ssl.google.com and/or mirrors.neusoft.edu.cn.The End
- User License Agreement of this binary package is available at 
+ to be downloaded from dl.google.com and/or from other suggested mirrors. The
+ End User License Agreement of this binary package is available at
  developer.android.com.
