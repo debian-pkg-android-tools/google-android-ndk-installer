@@ -14,9 +14,14 @@ all: $(UNPACK_DIR)/source.properties
 install: all
 	install -d -m0755 $(DOC_DIR)
 	install -m0644 $(UNPACK_DIR)/source.properties $(DOC_DIR)/
-	mv $(UNPACK_DIR) $(INSTALL_DIR)
-	find ${INSTALL_DIR} | sort >> /var/lib/dpkg/info/google-${PKG_NAME}-installer.list
 	find ${DOC_DIR} | sort >> /var/lib/dpkg/info/google-${PKG_NAME}-installer.list
+	@if [ ! -d $(INSTALL_DIR) ]; then \
+		mv $(UNPACK_DIR) $(INSTALL_DIR) ; \
+		find ${INSTALL_DIR} | sort >> /var/lib/dpkg/info/google-${PKG_NAME}-installer.list ;\
+	else\
+		echo "\033[0;31m$(INSTALL_DIR) already exists.\033[0m" ; \
+		exit 1 ; \
+	fi
 
 $(UNPACK_DIR)/source.properties: $(DL_DIR)/$(PKG_SOURCE)
 	cd $(DL_DIR) && unzip -ou $(PKG_SOURCE)
@@ -33,4 +38,3 @@ distclean: clean
 	-rm -rf -- $(DL_DIR)
 
 .PHONY: install clean
-

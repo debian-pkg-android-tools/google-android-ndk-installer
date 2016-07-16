@@ -1,6 +1,6 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: google-android-ndk-installer
-Source: https://anonscm.debian.org/cgit/android-tools/google-android-ndk-installer.git
+Source: http://anonscm.debian.org/gitweb/?p=android-tools/google-android-ndk-installer.git
 
 Files: *
 Copyright: public-domain

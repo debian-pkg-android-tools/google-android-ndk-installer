@@ -4,16 +4,21 @@ set -e
 
 # Source debconf library.
 . /usr/share/debconf/confmodule
-
-db_get google-android-ndk-installer/mirror
+db_get google-android-installers/mirror
 
 case "$1" in
     configure)
-        install -d -m0700 -o nobody -g nogroup /var/cache/google-android-ndk-installer
-        cp /usr/share/google-android-ndk-installer/Makefile \
-            /usr/share/google-android-ndk-installer/android-ndk-r12-linux-x86_64.zip.sha1 \
-            /var/cache/google-android-ndk-installer/
-        make -C /var/cache/google-android-ndk-installer/ DL_MIRROR="$RET" install
+        if [ "${DEBCONF_RECONFIGURE}" = "1" ]; then
+            db_fset google-android-installers/mirror seen false
+            db_input high google-android-installers/mirror || true
+            db_go || true
+        else
+            install -d -m0700 -o nobody -g nogroup /var/cache/google-android-ndk-installer
+            cp /usr/share/google-android-ndk-installer/Makefile \
+               /usr/share/google-android-ndk-installer/android-ndk-r12-linux-x86_64.zip.sha1 \
+               /var/cache/google-android-ndk-installer/
+            make -C /var/cache/google-android-ndk-installer/ DL_MIRROR="$RET" install
+	fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
