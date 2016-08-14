@@ -1,3 +1,9 @@
+google-android-ndk-installer (12+1) unstable; urgency=medium
+
+  * Add Czech PO translation file
+
+ -- Mouaad Aallam <Mouaad@Aallam.com>  Sun, 14 Aug 2016 22:34:47 +0000
+
 google-android-ndk-installer (12) unstable; urgency=medium
 
   * Initial release (Closes: #829098)
