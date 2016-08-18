@@ -1,5 +1,5 @@
 PKG_NAME:=android-ndk
-PKG_VERSION:=12
+PKG_VERSION:=12b
 
 PKG_SOURCE:=${PKG_NAME}-r${PKG_VERSION}-linux-x86_64.zip
 PKG_SOURCE_URL:=${DL_MIRROR}/android/repository/${PKG_SOURCE}

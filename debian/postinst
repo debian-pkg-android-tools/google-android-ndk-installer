@@ -15,7 +15,7 @@ case "$1" in
         else
             install -d -m0700 -o nobody -g nogroup /var/cache/google-android-ndk-installer
             cp /usr/share/google-android-ndk-installer/Makefile \
-               /usr/share/google-android-ndk-installer/android-ndk-r12-linux-x86_64.zip.sha1 \
+               /usr/share/google-android-ndk-installer/android-ndk-r12b-linux-x86_64.zip.sha1 \
                /var/cache/google-android-ndk-installer/
             make -C /var/cache/google-android-ndk-installer/ DL_MIRROR="$RET" install
 	fi
