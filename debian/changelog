@@ -2,6 +2,7 @@ google-android-ndk-installer (12b) unstable; urgency=medium
 
   * Update to latest version: 12b
   * Add Czech PO translation file
+  * Add Dutch PO translation file
 
  -- Mouaad Aallam <Mouaad@Aallam.com>  Sun, 14 Aug 2016 22:34:47 +0000
 
