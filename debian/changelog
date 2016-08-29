@@ -1,3 +1,9 @@
+google-android-ndk-installer (12.b+1) unstable; urgency=medium
+
+  * Add French PO translation file
+
+ -- Mouaad Aallam <Mouaad@Aallam.com>  Mon, 29 Aug 2016 16:26:05 +0100
+
 google-android-ndk-installer (12.b) unstable; urgency=medium
 
   * Update to latest version: 12b
